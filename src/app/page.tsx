@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
 import {
   Cloud,
   Zap,
@@ -122,36 +123,57 @@ export default function HomePage() {
         
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
-              <Sparkles className="mr-1.5 h-3 w-3" />
-              Now in Public Beta
-            </Badge>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Badge variant="secondary" className="mb-6">
+                <Sparkles className="mr-1.5 h-3 w-3" />
+                Now in Public Beta
+              </Badge>
+            </motion.div>
             
-            <h1 className="text-4xl font-bold tracking-tight text-[var(--text-dark)] sm:text-6xl">
+            <motion.h1 
+              className="text-4xl font-bold tracking-tight text-[var(--text-dark)] sm:text-6xl"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Your Personal AI Assistant,{" "}
               <span className="cloudhack-gradient-text">
                 Deployed in Minutes
               </span>
-            </h1>
+            </motion.h1>
             
-            <p className="mt-6 text-lg leading-8 text-[hsl(var(--muted-foreground))]">
+            <motion.p 
+              className="mt-6 text-lg leading-8 text-[hsl(var(--muted-foreground))]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               CloudHack Deploy makes it effortless to run OpenClaw on your own cloud infrastructure.
               No DevOps skills needed. Full control over your data. Deploy once, access everywhere.
-            </p>
+            </motion.p>
             
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <motion.div 
+              className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <Link href="/signup">
-                <Button size="lg" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto cloudhack-gradient text-white hover:opacity-90 transition-opacity">
                   Start Deploying
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="#features">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform">
                   See How It Works
                 </Button>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Stats */}
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-[hsl(var(--border))] pt-10">
@@ -185,20 +207,33 @@ export default function HomePage() {
           </div>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature) => {
+            {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <Card key={feature.title} className="border-[hsl(var(--border))] bg-[hsl(var(--card))]">
-                  <CardContent className="pt-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[hsl(var(--primary))]/10">
-                      <Icon className="h-6 w-6 text-[hsl(var(--primary))]" />
-                    </div>
-                    <h3 className="text-lg font-semibold">{feature.title}</h3>
-                    <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <Card className="border-[hsl(var(--border))] bg-[hsl(var(--card))] h-full hover:shadow-lg transition-shadow">
+                    <CardContent className="pt-6">
+                      <motion.div 
+                        className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg cloudhack-gradient"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      >
+                        <Icon className="h-6 w-6 text-white" />
+                      </motion.div>
+                      <h3 className="text-lg font-semibold">{feature.title}</h3>
+                      <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">
+                        {feature.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               )
             })}
           </div>
