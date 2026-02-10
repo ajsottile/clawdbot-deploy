@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Cloud } from "lucide-react"
+/* Cloud icon replaced by CloudHack logo image */
 
 const footerLinks = {
   product: [
@@ -27,11 +27,9 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg cloudhack-gradient">
-                <Cloud className="h-4 w-4 text-white" />
-              </div>
-              <span className="font-semibold text-[var(--text-dark)]">CloudHack Deploy</span>
+            <Link href="/" className="flex items-center gap-1">
+              <span className="cloudhack-gradient-text text-xl font-extrabold tracking-tight">CloudHack</span>
+              <span className="text-xl font-semibold text-[var(--text-dark)]">Deploy</span>
             </Link>
             <p className="text-sm text-[hsl(var(--muted-foreground))]">
               Deploy your personal AI assistant in minutes. No technical expertise required.

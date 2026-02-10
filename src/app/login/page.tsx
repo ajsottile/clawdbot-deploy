@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Cloud, Github, Mail } from "lucide-react"
+import { Github, Mail } from "lucide-react"
 import { useAuthStore } from "@/store/auth-store"
 
 export default function LoginPage() {
@@ -46,8 +46,9 @@ export default function LoginPage() {
     <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600">
-            <Cloud className="h-6 w-6 text-white" />
+          <div className="mx-auto mb-4">
+            <span className="cloudhack-gradient-text text-3xl font-extrabold tracking-tight">CloudHack</span>
+            <span className="text-3xl font-semibold text-[var(--text-dark)]"> Deploy</span>
           </div>
           <CardTitle className="text-2xl">Welcome back</CardTitle>
           <CardDescription>
