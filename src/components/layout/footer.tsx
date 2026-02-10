@@ -28,10 +28,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-purple-600">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg cloudhack-gradient">
                 <Cloud className="h-4 w-4 text-white" />
               </div>
-              <span className="font-semibold">ClawBot Deploy</span>
+              <span className="font-semibold text-[var(--text-dark)]">CloudHack Deploy</span>
             </Link>
             <p className="text-sm text-[hsl(var(--muted-foreground))]">
               Deploy your personal AI assistant in minutes. No technical expertise required.
@@ -92,7 +92,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-[hsl(var(--border))] pt-8">
           <p className="text-center text-sm text-[hsl(var(--muted-foreground))]">
-            © {new Date().getFullYear()} ClawBot Deploy. All rights reserved.
+            © {new Date().getFullYear()} CloudHack Deploy. All rights reserved.
           </p>
         </div>
       </div>

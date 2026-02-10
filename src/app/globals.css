@@ -1,48 +1,51 @@
 @import "tailwindcss";
 
 :root {
+  /* CloudHack Brand Colors */
+  --cloudhack-primary: #FF8C42;
+  --cloudhack-secondary: #FF6B6B;
+  --cloudhack-gradient: linear-gradient(135deg, #FF8C42 0%, #FF6B6B 100%);
+  --background-light: #FFFFFF;
+  --text-dark: #1F1F1F;
+  
   --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
+  --foreground: 0 0% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
+  --card-foreground: 0 0% 12%;
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 262 83% 58%;
+  --popover-foreground: 0 0% 12%;
+  --primary: 22 100% 63%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 262 83% 58%;
+  --secondary: 0 0% 97%;
+  --secondary-foreground: 0 0% 12%;
+  --muted: 0 0% 97%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 0 100% 71%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 262 83% 58%;
+  --border: 0 0% 90%;
+  --input: 0 0% 95%;
+  --ring: 22 100% 63%;
   --radius: 0.75rem;
 }
 
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 263 70% 50%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 263 70% 50%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 263 70% 50%;
+/* CloudHack Light Theme - Premium Enterprise Branding */
+.cloudhack-gradient {
+  background: linear-gradient(135deg, var(--cloudhack-primary) 0%, var(--cloudhack-secondary) 100%);
+}
+
+.cloudhack-gradient-text {
+  background: linear-gradient(135deg, var(--cloudhack-primary) 0%, var(--cloudhack-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cloudhack-card {
+  background: var(--background-light);
+  border: 1px solid #F0F0F0;
+  box-shadow: 0 2px 8px rgba(255, 140, 66, 0.1), 0 1px 3px rgba(255, 107, 107, 0.05);
 }
 
 * {
@@ -93,11 +96,16 @@ body {
   animation: gradient 8s ease infinite;
 }
 
-/* Glow effect */
+/* CloudHack Glow effect */
 .glow {
-  box-shadow: 0 0 20px hsl(var(--primary) / 0.3),
-              0 0 40px hsl(var(--primary) / 0.2),
-              0 0 60px hsl(var(--primary) / 0.1);
+  box-shadow: 0 0 20px rgba(255, 140, 66, 0.3),
+              0 0 40px rgba(255, 107, 107, 0.2),
+              0 0 60px rgba(255, 140, 66, 0.1);
+}
+
+.cloudhack-glow {
+  box-shadow: 0 4px 20px rgba(255, 140, 66, 0.15),
+              0 2px 8px rgba(255, 107, 107, 0.1);
 }
 
 /* Glass morphism */

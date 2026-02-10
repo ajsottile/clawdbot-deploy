@@ -7,9 +7,9 @@ import { Footer } from "@/components/layout/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ClawBot Deploy - One-Click AI Assistant Deployment",
-  description: "Deploy your personal AI assistant in minutes. No technical expertise required. Powered by OpenClaw.",
-  keywords: ["AI", "assistant", "deploy", "cloud", "OpenClaw", "automation"],
+  title: "CloudHack Deploy - One-Click AI Assistant Deployment",
+  description: "Deploy your personal AI assistant in minutes. No technical expertise required. Powered by CloudHack.",
+  keywords: ["AI", "assistant", "deploy", "cloud", "CloudHack", "automation"],
 }
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col">
           <Navbar />

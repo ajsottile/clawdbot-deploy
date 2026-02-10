@@ -117,8 +117,8 @@ export default function HomePage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+        {/* CloudHack Background gradient */}
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,140,66,0.15),rgba(255,255,255,0))]" />
         
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -127,15 +127,15 @@ export default function HomePage() {
               Now in Public Beta
             </Badge>
             
-            <h1 className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-[var(--text-dark)] sm:text-6xl">
               Your Personal AI Assistant,{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text">
+              <span className="cloudhack-gradient-text">
                 Deployed in Minutes
               </span>
             </h1>
             
             <p className="mt-6 text-lg leading-8 text-[hsl(var(--muted-foreground))]">
-              ClawBot Deploy makes it effortless to run OpenClaw on your own cloud infrastructure.
+              CloudHack Deploy makes it effortless to run OpenClaw on your own cloud infrastructure.
               No DevOps skills needed. Full control over your data. Deploy once, access everywhere.
             </p>
             
@@ -298,13 +298,13 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-[hsl(var(--border))] bg-gradient-to-br from-violet-500/10 via-purple-500/10 to-pink-500/10 py-24">
+      <section className="border-t border-[hsl(var(--border))] bg-gradient-to-br from-orange-500/10 via-red-500/10 to-orange-400/10 py-24">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Ready to deploy your AI assistant?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[hsl(var(--muted-foreground))]">
-            Join thousands of users who have already deployed their personal AI with ClawBot Deploy.
+            Join thousands of users who have already deployed their personal AI with CloudHack Deploy.
             Start your free trial today.
           </p>
           <div className="mt-10">

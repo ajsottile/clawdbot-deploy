@@ -223,10 +223,10 @@ export default function DashboardPage() {
 
       {/* Stats */}
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
-        <Card>
+        <Card className="cloudhack-card cloudhack-glow">
           <CardContent className="flex items-center gap-4 p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[hsl(var(--primary))]/10">
-              <Cloud className="h-6 w-6 text-[hsl(var(--primary))]" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg cloudhack-gradient">
+              <Cloud className="h-6 w-6 text-white" />
             </div>
             <div>
               <p className="text-sm text-[hsl(var(--muted-foreground))]">
@@ -236,10 +236,10 @@ export default function DashboardPage() {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="cloudhack-card cloudhack-glow">
           <CardContent className="flex items-center gap-4 p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
-              <Activity className="h-6 w-6 text-emerald-500" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg cloudhack-gradient">
+              <Activity className="h-6 w-6 text-white" />
             </div>
             <div>
               <p className="text-sm text-[hsl(var(--muted-foreground))]">
@@ -249,10 +249,10 @@ export default function DashboardPage() {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="cloudhack-card cloudhack-glow">
           <CardContent className="flex items-center gap-4 p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500/10">
-              <Server className="h-6 w-6 text-amber-500" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg cloudhack-gradient">
+              <Server className="h-6 w-6 text-white" />
             </div>
             <div>
               <p className="text-sm text-[hsl(var(--muted-foreground))]">
